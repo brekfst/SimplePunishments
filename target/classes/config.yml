@@ -1,0 +1,153 @@
+# Database Configuration
+database:
+  type: SQLITE  # SQLITE, MYSQL, MONGODB
+  mysql:
+    host: localhost
+    port: 3306
+    database: punishments
+    username: root
+    password: password
+  mongodb:
+    uri: mongodb://localhost:27017
+    database: minecraft
+
+# Messages Configuration
+messages:
+  prefix: "&7[&bSimplePunishments&7]&r "
+  no-permission: "%prefix% &cYou don't have permission to use this command."
+  not-banned: "%prefix% &cPlayer is not banned."
+  already-banned: "%prefix%&cThat player is already banned!"
+  player-not-found: "%prefix% &cPlayer not found."
+  player-not-online: "%prefix% &cPlayer must be online for this action."
+  invalid-duration: "%prefix% &cInvalid duration format. Use <number><s/m/h/d/w>"
+  default-reason: "No reason specified"
+
+  # Ban Messages
+  ban-message: |-
+    &cYou have been banned from this server!
+    &7Reason: &f%reason%
+    &7Duration: &f%duration%
+    &7Banned by: &f%issuer%
+
+  ipban-message: |-
+    &cYou have been banned from this server!
+    &7Reason: &f%reason%
+    &7Duration: &f%duration%
+    &7Banned by: &f%issuer%
+
+  temp-ban-message: |-
+    &cYou have been temporarily banned from this server!
+    &7Reason: &f%reason%
+    &7Duration: &f%duration%
+    &7Banned by: &f%issuer%
+    &7Expires: &f%expires%
+
+  # Mute Messages
+  mute-message: |-
+    &cYou have been muted!
+    &7Reason: &f%reason%
+    &7Duration: &f%duration%
+    &7Muted by: &f%issuer%
+
+  temp-mute-message: |-
+    %prefix% &cYou have been temporarily muted!
+    &7Reason: &f%reason%
+    &7Duration: &f%duration%
+    &7Expires in: &f%expires%
+
+  # Command Messages
+  command:
+    ban:
+      usage: "&cUsage: /ban <player> [reason]"
+      success: "%prefix% &7Successfully banned &f%player% &7for &f%reason%"
+    ipban:
+      success: "%prefix% &7Successfully IP banned &f%player% &7(&f%ip%&7) for: &f%reason%"
+    tempban:
+      usage: "&cUsage: /tempban <player> <duration> [reason]"
+      success: "%prefix% &7Successfully banned &f%player% &7for &f%duration%"
+    unban:
+      usage: "&cUsage: /unban <player>"
+      success: "%prefix% &7Successfully unbanned &f%player%"
+      success-ip: "%prefix% &7Successfully removed IP ban from &f%player%"
+      success-both: "%prefix% &7Successfully removed all bans from &f%player%"
+      not-banned: "%prefix% &cPlayer is not banned."
+    mute:
+      usage: "&cUsage: /mute <player> [reason]"
+      success: "%prefix% &7Successfully muted &f%player% &7for &f%reason%"
+      already-muted: "%prefix% &c%player% is already muted."
+    tempmute:
+      usage: "&cUsage: /tempmute <player> <duration> [reason]"
+      success: "%prefix% &7Successfully muted &f%player% &7for &f%duration%"
+    unmute:
+      usage: "&cUsage: /unmute <player>"
+      success: "%prefix% &7Successfully unmuted &f%player%"
+      not-muted: "%prefix% &cPlayer is not muted."
+    kick:
+      usage: "&cUsage: /kick <player> [reason]"
+      success: "%prefix% &7Successfully kicked &f%player% &7for &f%reason%"
+
+gui:
+  title: "&8%player%'s Punishment History"
+  items:
+    ban:
+      material: "BARRIER"
+      name: "&c&lBan &8- &7%date%"
+      lore:
+        - "&8&m------------------------"
+        - "&7Reason: &f%reason%"
+        - "&7Issued by: &f%issuer%"
+        - "&7Status: &f%status%"
+        - "&8&m------------------------"
+    temp_ban:
+      material: "CLOCK"
+      name: "&e&lTemp Ban &8- &7%date%"
+      lore:
+        - "&8&m------------------------"
+        - "&7Reason: &f%reason%"
+        - "&7Issued by: &f%issuer%"
+        - "&7Duration: &f%duration%"
+        - "&7Expires: &f%expires%"
+        - "&7Status: &f%status%"
+        - "&8&m------------------------"
+    mute:
+      material: "BOOK"
+      name: "&6&lMute &8- &7%date%"
+      lore:
+        - "&8&m------------------------"
+        - "&7Reason: &f%reason%"
+        - "&7Issued by: &f%issuer%"
+        - "&7Status: &f%status%"
+        - "&8&m------------------------"
+    temp_mute:
+      material: "WRITABLE_BOOK"
+      name: "&e&lTemp Mute &8- &7%date%"
+      lore:
+        - "&8&m------------------------"
+        - "&7Reason: &f%reason%"
+        - "&7Issued by: &f%issuer%"
+        - "&7Duration: &f%duration%"
+        - "&7Expires: &f%expires%"
+        - "&7Status: &f%status%"
+        - "&8&m------------------------"
+    kick:
+      material: "LEATHER_BOOTS"
+      name: "&a&lKick &8- &7%date%"
+      lore:
+        - "&8&m------------------------"
+        - "&7Reason: &f%reason%"
+        - "&7Issued by: &f%issuer%"
+        - "&8&m------------------------"
+  navigation:
+    previous-page:
+      material: "ARROW"
+      name: "&7Previous Page"
+    next-page:
+      material: "ARROW"
+      name: "&7Next Page"
+  info:
+    material: "PLAYER_HEAD"
+    name: "&e%player%'s Punishment History"
+    lore:
+      - "&8&m------------------------"
+      - "&7Total Punishments: &f%total%"
+      - "&8&m------------------------"

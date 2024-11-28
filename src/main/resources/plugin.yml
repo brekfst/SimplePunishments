@@ -1,0 +1,54 @@
+name: SimplePunishments
+version: '1.0'
+main: com.brekfst.simplepunishments.SimplePunishments
+api-version: '1.21'
+commands:
+  ban:
+    description: Ban a player permanently
+    usage: /ban <player> [reason]
+    permission: simplepunishments.ban
+  ipban:
+    description: Ban a player's IP address
+    usage: /ipban <player> [reason]
+    permission: simplepunishments.ipban
+  tempban:
+    description: Ban a player temporarily
+    usage: /tempban <player> <duration> [reason]
+    permission: simplepunishments.tempban
+  unban:
+    description: Unban a player
+    usage: /unban <player>
+    permission: simplepunishments.unban
+  mute:
+    description: Mute a player permanently
+    usage: /mute <player> [reason]
+    permission: simplepunishments.mute
+  tempmute:
+    description: Mute a player temporarily
+    usage: /tempmute <player> <duration> [reason]
+    permission: simplepunishments.tempmute
+  unmute:
+    description: Unmute a player
+    usage: /unmute <player>
+    permission: simplepunishments.unmute
+  kick:
+    description: Kick a player
+    usage: /kick <player> [reason]
+    permission: simplepunishments.kick
+  history:
+    description: View a player's punishment history
+    usage: /history <player>
+    permission: simplepunishments.history
+
+permissions:
+  simplepunishments.*:
+    description: Gives access to all SimplePunishments commands
+    children:
+      simplepunishments.ban: true
+      simplepunishments.tempban: true
+      simplepunishments.unban: true
+      simplepunishments.mute: true
+      simplepunishments.tempmute: true
+      simplepunishments.unmute: true
+      simplepunishments.kick: true
+      simplepunishments.history: true
