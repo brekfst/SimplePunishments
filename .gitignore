@@ -72,9 +72,6 @@ libs/
 out/
 build/
 
-# Ignore spigot plugin configuration files that may contain sensitive data
-plugins/YourPluginName/config.yml
-
 # Ignore user-specific files
 *.swp
 *.swo

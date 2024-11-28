@@ -1,5 +1,7 @@
-package com.brekfst.simplepunishments;
+package com.brekfst.simplepunishments.punishments;
 
+import com.brekfst.simplepunishments.SimplePunishments;
+import com.brekfst.simplepunishments.events.PunishmentEvent;
 import org.bukkit.entity.Player;
 
 import java.time.Duration;
@@ -203,7 +205,7 @@ public class PunishmentManager {
         }
     }
 
-    String formatExpiration(Instant expiration) {
+    public String formatExpiration(Instant expiration) {
         Duration timeUntil = Duration.between(Instant.now(), expiration);
         long days = timeUntil.toDays();
         long hours = timeUntil.toHoursPart();

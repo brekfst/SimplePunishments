@@ -1,7 +1,7 @@
-package com.brekfst.simplepunishments;
+package com.brekfst.simplepunishments.config;
 
+import com.brekfst.simplepunishments.SimplePunishments;
 import org.bukkit.ChatColor;
-import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 
 import java.util.HashMap;

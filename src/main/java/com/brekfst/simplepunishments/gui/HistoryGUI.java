@@ -1,5 +1,7 @@
-package com.brekfst.simplepunishments;
+package com.brekfst.simplepunishments.gui;
 
+import com.brekfst.simplepunishments.punishments.Punishment;
+import com.brekfst.simplepunishments.SimplePunishments;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -16,7 +18,7 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-class HistoryGUI {
+public class HistoryGUI {
     private final SimplePunishments plugin;
     private final FileConfiguration config;
     private final Map<UUID, Integer> playerPages = new HashMap<>();

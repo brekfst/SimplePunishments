@@ -1,5 +1,10 @@
-package com.brekfst.simplepunishments;
+package com.brekfst.simplepunishments.commands;
 
+import com.brekfst.simplepunishments.*;
+import com.brekfst.simplepunishments.config.ConfigManager;
+import com.brekfst.simplepunishments.gui.HistoryGUI;
+import com.brekfst.simplepunishments.punishments.Punishment;
+import com.brekfst.simplepunishments.punishments.PunishmentType;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -11,7 +16,7 @@ import java.time.Instant;
 import java.util.*;
 import java.util.stream.Collectors;
 
-class PunishmentCommand implements CommandExecutor, TabCompleter {
+public class PunishmentCommand implements CommandExecutor, TabCompleter {
     private final SimplePunishments plugin;
     private final ConfigManager config;
 

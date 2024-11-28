@@ -1,5 +1,10 @@
 package com.brekfst.simplepunishments;
 
+import com.brekfst.simplepunishments.commands.PunishmentCommand;
+import com.brekfst.simplepunishments.config.ConfigManager;
+import com.brekfst.simplepunishments.database.DatabaseManager;
+import com.brekfst.simplepunishments.events.PunishmentListener;
+import com.brekfst.simplepunishments.punishments.PunishmentManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class SimplePunishments extends JavaPlugin {

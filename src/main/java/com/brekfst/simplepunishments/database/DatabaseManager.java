@@ -1,5 +1,8 @@
-package com.brekfst.simplepunishments;
+package com.brekfst.simplepunishments.database;
 
+import com.brekfst.simplepunishments.punishments.Punishment;
+import com.brekfst.simplepunishments.punishments.PunishmentType;
+import com.brekfst.simplepunishments.SimplePunishments;
 import com.mongodb.MongoException;
 import com.mongodb.client.*;
 import org.bson.Document;
@@ -7,7 +10,7 @@ import java.sql.*;
 import java.util.*;
 import java.util.Date;
 
-class DatabaseManager {
+public class DatabaseManager {
     private Connection sqlConnection;
     private MongoClient mongoClient;
     private MongoDatabase mongoDb;

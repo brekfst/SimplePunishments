@@ -1,5 +1,8 @@
-package com.brekfst.simplepunishments;
+package com.brekfst.simplepunishments.events;
 
+import com.brekfst.simplepunishments.punishments.Punishment;
+import com.brekfst.simplepunishments.punishments.PunishmentType;
+import com.brekfst.simplepunishments.SimplePunishments;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -13,7 +16,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
-class PunishmentListener implements Listener {
+public class PunishmentListener implements Listener {
     private final SimplePunishments plugin;
 
     public PunishmentListener(SimplePunishments plugin) {

@@ -1,4 +1,6 @@
-package com.brekfst.simplepunishments;
+package com.brekfst.simplepunishments.punishments;
+
+import com.brekfst.simplepunishments.SimplePunishments;
 
 import java.time.Duration;
 import java.time.Instant;

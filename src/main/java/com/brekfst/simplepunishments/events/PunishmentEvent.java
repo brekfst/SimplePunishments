@@ -1,5 +1,6 @@
-package com.brekfst.simplepunishments;
+package com.brekfst.simplepunishments.events;
 
+import com.brekfst.simplepunishments.punishments.Punishment;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Cancellable;
